@@ -1,0 +1,49 @@
+# 
+#
+# Authors:
+#    Bo Xue
+#    Pascal Schlapfer
+#    Seung Yon Rhee
+#    Peifen Zhang
+#
+# Please see the license agreement regarding the use of and distribution of this file.
+# The format of this file is defined at http://bioinformatics.ai.sri.com/ptools/flatfile-format.html .
+#
+# Species: Coccomyxa subellipsoidea C-169
+# Database: CsubellipsoideaCyc
+# Version: 1.0
+# File Name: protein-features.dat
+# Date and time generated: April 18, 2017, 22:03:26
+#
+# Attributes:
+#    UNIQUE-ID
+#    TYPES
+#    COMMON-NAME
+#    ACCESSION-1
+#    ALTERNATE-SEQUENCE
+#    ATTACHED-GROUP
+#    CATALYTIC-ACTIVITY
+#    CITATIONS
+#    COMMENT
+#    COMPONENT-OF
+#    CREDITS
+#    DATA-SOURCE
+#    DBLINKS
+#    DOCUMENTATION
+#    FEATURE-COLOR
+#    FEATURE-OF
+#    HIDE-SLOT?
+#    HOMOLOGY-MOTIF
+#    INSTANCE-NAME-TEMPLATE
+#    LEFT-END-POSITION
+#    LINKAGE-TYPE
+#    MEMBER-SORT-FN
+#    PATHOLOGIC-NAME-MATCHER-EVIDENCE
+#    PATHOLOGIC-PWY-EVIDENCE
+#    POSSIBLE-FEATURE-STATES
+#    RESIDUE-NUMBER
+#    RESIDUE-TYPE
+#    RIGHT-END-POSITION
+#    SYNONYMS
+#
+# The CSUBELLIPSOIDEA database contains no Protein-Features.

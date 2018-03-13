@@ -1,0 +1,69 @@
+# 
+#
+# Authors:
+#    Bo Xue
+#    Pascal Schlapfer
+#    Seung Yon Rhee
+#    Peifen Zhang
+#
+# Please see the license agreement regarding the use of and distribution of this file.
+# The format of this file is defined at http://bioinformatics.ai.sri.com/ptools/flatfile-format.html .
+#
+# Species: Coccomyxa subellipsoidea C-169
+# Database: CsubellipsoideaCyc
+# Version: 1.0
+# File Name: protligandcplxes.dat
+# Date and time generated: April 18, 2017, 22:03:26
+#
+# Attributes:
+#    UNIQUE-ID
+#    TYPES
+#    COMMON-NAME
+#    ABBREV-NAME
+#    AROMATIC-RINGS
+#    ATOM-CHARGES
+#    CATALYZES
+#    CITATIONS
+#    COFACTORS-OF
+#    COMMENT
+#    COMPONENT-COEFFICIENTS
+#    COMPONENT-OF
+#    COMPONENTS
+#    CONSENSUS-SEQUENCE
+#    COPY-NUMBER
+#    CREDITS
+#    DATA-SOURCE
+#    DBLINKS
+#    DNA-FOOTPRINT-SIZE
+#    DOCUMENTATION
+#    ENZYME-NOT-USED-IN
+#    GO-TERMS
+#    HAS-NO-STRUCTURE?
+#    HIDE-SLOT?
+#    IN-MIXTURE
+#    ISOZYME-SEQUENCE-SIMILARITY
+#    LOCATIONS
+#    MEMBER-SORT-FN
+#    MODIFIED-FORM
+#    MOLECULAR-WEIGHT
+#    MOLECULAR-WEIGHT-EXP
+#    MOLECULAR-WEIGHT-KD
+#    MOLECULAR-WEIGHT-SEQ
+#    N+1-NAME
+#    N-1-NAME
+#    N-NAME
+#    NEIDHARDT-SPOT-NUMBER
+#    NON-STANDARD-INCHI
+#    PATHOLOGIC-NAME-MATCHER-EVIDENCE
+#    PATHOLOGIC-PWY-EVIDENCE
+#    PI
+#    RADICAL-ATOMS
+#    REGULATED-BY
+#    REGULATES
+#    SPECIES
+#    STRUCTURE-BONDS
+#    SUPERATOMS
+#    SYMMETRY
+#    SYNONYMS
+#
+# The CSUBELLIPSOIDEA database contains no Protein-Small-Molecule-Complexes.

@@ -1,0 +1,19 @@
+# 
+#
+# Authors:
+#    Bo Xue
+#    Pascal Schlapfer
+#    Seung Yon Rhee
+#    Peifen Zhang
+#
+# Please see the license agreement regarding the use of and distribution of this file.
+# The format of this file is defined at http://bioinformatics.ai.sri.com/ptools/flatfile-format.html .
+#
+# Species: Coccomyxa subellipsoidea C-169
+# Database: CsubellipsoideaCyc
+# Version: 1.0
+# File Name: protcplxs.col
+# Date and time generated: April 18, 2017, 22:04:10
+#
+#		1	1
+UNIQUE-ID	NAME	GENE-NAME	GENE-ID	SUBUNIT-COMPOSITION

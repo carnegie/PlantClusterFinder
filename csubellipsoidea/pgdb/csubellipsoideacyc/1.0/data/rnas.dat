@@ -1,0 +1,74 @@
+# 
+#
+# Authors:
+#    Bo Xue
+#    Pascal Schlapfer
+#    Seung Yon Rhee
+#    Peifen Zhang
+#
+# Please see the license agreement regarding the use of and distribution of this file.
+# The format of this file is defined at http://bioinformatics.ai.sri.com/ptools/flatfile-format.html .
+#
+# Species: Coccomyxa subellipsoidea C-169
+# Database: CsubellipsoideaCyc
+# Version: 1.0
+# File Name: rnas.dat
+# Date and time generated: April 18, 2017, 22:03:23
+#
+# Attributes:
+#    UNIQUE-ID
+#    TYPES
+#    COMMON-NAME
+#    ABBREV-NAME
+#    ANTICODON
+#    AROMATIC-RINGS
+#    ATOM-CHARGES
+#    ATOM-ISOTOPES
+#    CHEMICAL-FORMULA
+#    CITATIONS
+#    CODONS
+#    COFACTORS-OF
+#    COMMENT
+#    COMPONENT-OF
+#    CREDITS
+#    DATA-SOURCE
+#    DBLINKS
+#    DOCUMENTATION
+#    FAST-EQUILIBRATING-INSTANCES?
+#    GENE
+#    GO-TERMS
+#    HAS-NO-STRUCTURE?
+#    HIDE-SLOT?
+#    IN-MIXTURE
+#    INCHI
+#    INCHI-KEY
+#    INSTANCE-NAME-TEMPLATE
+#    INTERNALS-OF-GROUP
+#    LOCATIONS
+#    MEMBER-SORT-FN
+#    MODIFIED-FORM
+#    MOLECULAR-WEIGHT
+#    MONOISOTOPIC-MW
+#    N+1-NAME
+#    N-1-NAME
+#    N-NAME
+#    NON-STANDARD-INCHI
+#    PATHOLOGIC-NAME-MATCHER-EVIDENCE
+#    PATHOLOGIC-PWY-EVIDENCE
+#    PKA1
+#    PKA2
+#    PKA3
+#    RADICAL-ATOMS
+#    REGULATED-BY
+#    REGULATES
+#    SMILES
+#    SPECIES
+#    SPLICE-FORM-INTRONS
+#    STRUCTURE-BONDS
+#    SUPERATOMS
+#    SYNONYMS
+#    SYSTEMATIC-NAME
+#    TAUTOMERS
+#    UNMODIFIED-FORM
+#
+# The CSUBELLIPSOIDEA database contains no RNAs.

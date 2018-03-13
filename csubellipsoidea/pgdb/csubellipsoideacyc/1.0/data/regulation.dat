@@ -1,0 +1,51 @@
+# 
+#
+# Authors:
+#    Bo Xue
+#    Pascal Schlapfer
+#    Seung Yon Rhee
+#    Peifen Zhang
+#
+# Please see the license agreement regarding the use of and distribution of this file.
+# The format of this file is defined at http://bioinformatics.ai.sri.com/ptools/flatfile-format.html .
+#
+# Species: Coccomyxa subellipsoidea C-169
+# Database: CsubellipsoideaCyc
+# Version: 1.0
+# File Name: regulation.dat
+# Date and time generated: April 18, 2017, 22:03:26
+#
+# Attributes:
+#    UNIQUE-ID
+#    TYPES
+#    COMMON-NAME
+#    ACCESSORY-PROTEINS
+#    ANTI-ANTITERM-END-POS
+#    ANTI-ANTITERM-START-POS
+#    ANTITERMINATOR-END-POS
+#    ANTITERMINATOR-START-POS
+#    ASSOCIATED-BINDING-SITE
+#    ASSOCIATED-RNASE
+#    CITATIONS
+#    COMMENT
+#    CREDITS
+#    DATA-SOURCE
+#    DOCUMENTATION
+#    DOWNSTREAM-GENES-ONLY?
+#    GROWTH-CONDITIONS
+#    HIDE-SLOT?
+#    INSTANCE-NAME-TEMPLATE
+#    KI
+#    MECHANISM
+#    MEMBER-SORT-FN
+#    MODE
+#    PATHOLOGIC-NAME-MATCHER-EVIDENCE
+#    PATHOLOGIC-PWY-EVIDENCE
+#    PAUSE-END-POS
+#    PAUSE-START-POS
+#    PHYSIOLOGICALLY-RELEVANT?
+#    REGULATED-ENTITY
+#    REGULATOR
+#    SYNONYMS
+#
+# The CSUBELLIPSOIDEA database contains no Regulation.

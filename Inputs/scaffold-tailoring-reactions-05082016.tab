@@ -1,0 +1,398 @@
+EC_number or RXN_ID	Enzyme class	Enzyme role	filler	Enzyme name	
+1.13.11.29	ASE	signature	NA	DOPA dioxygenase	
+1.13.11.30	ASE	signature	NA	DOPA dioxygenase	
+1.14.18.1	ASE	signature	NA	tyrosinase	
+RXN-13061	ASE	signature	NA	tyrosinase	
+4.1.1.25	ASE	signature	NA	tyrosine/DOPA decarboxylase	
+4.1.1.28	ASE	signature	NA	aromatic-L-amino-acid decarboxylase	
+2.3.1.159	ASE	signature	NA	acridone synthase	
+1.21.3.3	ASE	signature	NA	berberine bridge enzyme	
+2.5.1.45	ASE	signature	NA	homospermidine synthase	
+4.2.1.78	ASE	signature	NA	norcoclaurie synthase	
+4.3.3.2	ASE	signature	NA	strictosidine synthase	
+1.1.1.206	ASE	signature	NA	tropinone reductase I	
+1.1.1.236	ASE	signature	NA	tropinone reductase II	
+1.3.3.9	ASE	signature	NA	secologanin synthase	
+2.1.1.53	ASE	signature	NA	putrescine N-methyltransferase	
+2.1.1.158	ASE	signature	NA	xanthosine N-methyltransferase	
+RXN-8142	ASE	signature	NA	" 1,2-dehydroreticuline synthase"	
+1.5.1.27	ASE	signature	NA	" 1,2-dehydroreticuline reductase"	
+RXN-17117	ASE	signature	NA	reticuline epimerase	
+RXN-9314	ASE	signature	NA	(S)-corytuberine synthase	
+RXN-8688	ASE	signature	NA	17-oxosparteine synthase	
+4.3.1.24	PSE	signature	NA	phenylalanine ammonia-lyase	
+5.5.1.6	PSE	signature	NA	chalcone isomerase	
+1.14.11.22	PSE	signature	NA	flavone synthase	
+1.14.11.23	PSE	signature	NA	flavonol synthase	
+2.3.1.170	PSE	signature	NA	6'-deoxychalcone synthase	
+2.3.1.74	PSE	signature	NA	chalcone synthase	
+1.14.13.87	PSE	signature	NA	flavone synthase	
+RXN-7650	PSE	signature	NA	flavone synthase	
+RXN-7653	PSE	signature	NA	flavone synthase	
+1.14.13.136	PSE	signature	NA	isoflavone synthase	
+1.14.13.86	PSE	signature	NA	isoflavone synthase	
+RXN-7655	PSE	signature	NA	isoflavone synthase	
+4.2.1.105	PSE	signature	NA	isoflavone synthase (works together with 1.14.13.136)	
+1.14.11.9	PSE	signature	NA	flavanone 3-hydroxylase	
+1.1.1.234	PSE	signature	NA	flavanone reductase	
+1.17.1.3	PSE	signature	NA	leucoanthocyanidin reductase	
+1.3.1.77	PSE	signature	NA	anthocyanidin reductase	
+1.14.11.19	PSE	signature	NA	anthocyanidin synthase	
+LEUCPEL-RXN	PSE	signature	NA	anthocyanidin synthase	
+2.3.1.95	PSE	signature	NA	trihydroxystilbene synthase	
+2.3.1.146	PSE	signature	NA	pinosylvin synthase	
+RXN-7645	PSE	signature	NA	chalcone synthase	
+RXN-11468	PSE	signature	NA	chalcone synthase	
+RXN-7822	PSE	signature	NA	chalcone synthase	
+RXN-11473	PSE	signature	NA	chalcone synthase	
+RXN-7611	PSE	signature	NA	stilbene synthase	
+RXN-7577	PSE	signature	NA	stilbene synthase	
+RXN-7575	PSE	signature	NA	stilbene synthase	
+2.5.1.103	TPS	signature	NA	presqualene diphosphate synthase	
+2.5.1.21	TPS	signature	NA	squalene synthase	
+2.5.1.32-RXN	TPS	signature	NA	prephytoene synthase	
+2.5.1.96	TPS	signature	NA	"4,4?-diapophytoene synthase"	
+2.5.1.99	TPS	signature	NA	all-trans-phytoene synthase	
+3.1.7.10	TPS	signature	NA	"labda-7,13E-dien-15-ol-producing bifunctional diterpene synthase"	
+3.1.7.11	TPS	signature	NA	geranyl diphosphate diphosphatase (geraniol synthase)	
+3.1.7.5	TPS	signature	NA	geranylgeranyl diphosphate diphosphatase	
+3.1.7.6	TPS	signature	NA	"(E,E)-farnesol synthase"	
+3.1.7.7	TPS	signature	NA	drimenol cyclase	
+4.2.1.123	TPS	signature	NA	tetrahymanol synthase	
+4.2.1.124	TPS	signature	NA	arabidiol synthase	
+4.2.1.129	TPS	signature	NA	squalene—hopanol cyclase	
+4.2.1.133	TPS	signature	NA	copal-8-ol diphosphate hydratase	
+4.2.3.10	TPS	signature	NA	(-)-endo-fenchol synthase 	
+4.2.3.100	TPS	signature	NA	bicyclogermacrene synthase	
+4.2.3.101	TPS	signature	NA	7-epi-sesquithujene synthase	
+4.2.3.102	TPS	signature	NA	sesquithujene synthase	
+4.2.3.103	TPS	signature	NA	ent-isokaurene synthase	
+4.2.3.104	TPS	signature	NA	alpha-humulene synthase	
+4.2.3.105	TPS	signature	NA	tricyclene synthase	
+4.2.3.106	TPS	signature	NA	(E)-beta-ocimene synthase	
+4.2.3.107	TPS	signature	NA	(+)-car-3-ene synthase	
+4.2.3.108	TPS	signature	NA	"1,8-cineole synthase"	
+4.2.3.109	TPS	signature	NA	(–)-sabinene synthase	
+4.2.3.11	TPS	signature	NA	sabinene-hydrate synthase 	
+4.2.3.110	TPS	signature	NA	(+)-sabinene synthase	
+4.2.3.111	TPS	signature	NA	(–)-alpha-terpineol synthase	
+4.2.3.112	TPS	signature	NA	(+)-alpha-terpineol synthase	
+4.2.3.113	TPS	signature	NA	terpinolene synthase	
+4.2.3.114	TPS	signature	NA	gamma-terpinene synthase	
+4.2.3.115	TPS	signature	NA	alpha-terpinene synthase	
+4.2.3.116	TPS	signature	NA	(+)-camphene synthase	
+4.2.3.117	TPS	signature	NA	(-)-camphene synthase	
+4.2.3.119	TPS	signature	NA	(–)-alpha-pinene synthase	
+4.2.3.120	TPS	signature	NA	(–)-beta-pinene synthase	
+4.2.3.121	TPS	signature	NA	(+)-alpha-pinene synthase	
+4.2.3.122	TPS	signature	NA	(+)-beta-pinene synthase	
+4.2.3.123	TPS	signature	NA	beta-sesquiphellandrene synthase	
+4.2.3.125	TPS	signature	NA	alpha-muurolene synthase	
+4.2.3.126	TPS	signature	NA	gamma-muurolene synthase	
+4.2.3.127	TPS	signature	NA	beta-copaene synthase	
+4.2.3.128	TPS	signature	NA	beta-cubebene synthase	
+4.2.3.129	TPS	signature	NA	(+)-sativene synthase	
+4.2.3.13	TPS	signature	NA	(+)-delta-cadinene synthase 	
+4.2.3.130	TPS	signature	NA	tetraprenyl-beta-curcumene synthase	
+4.2.3.131	TPS	signature	NA	miltiradiene synthase	
+4.2.3.132	TPS	signature	NA	neoabietadiene synthase	
+4.2.3.133	TPS	signature	NA	alpha-copaene synthase	
+4.2.3.135	TPS	signature	NA	delta6-protoilludene synthase	
+4.2.3.136	TPS	signature	NA	alpha-isocomene synthase	
+4.2.3.137	TPS	signature	NA	(E)-2-epi-beta-caryophyllene synthase	
+4.2.3.138	TPS	signature	NA	(+)-epi-alpha-bisabolol synthase	
+4.2.3.139	TPS	signature	NA	"valerena-4,7(11)-diene synthase"	
+4.2.3.140	TPS	signature	NA	cis-abienol synthase	
+4.2.3.141	TPS	signature	NA	sclareol synthase	
+4.2.3.142	TPS	signature	NA	"7-epizingiberene synthase [(2Z,6Z)-farnesyl diphosphate cyclizing]"	
+4.2.3.143	TPS	signature	NA	kunzeaol synthase	
+4.2.3.144	TPS	signature	NA	geranyllinalool synthase	
+4.2.3.145	TPS	signature	NA	ophiobolin F synthase	
+4.2.3.146	TPS	signature	NA	cyclooctat-9-en-7-ol synthase	
+4.2.3.147	TPS	signature	NA	pimaradiene synthase	
+4.2.3.148	TPS	signature	NA	cembrene C synthase	
+4.2.3.149	TPS	signature	NA	nephthenol synthase	
+4.2.3.15	TPS	signature	NA	myrcene synthase 	
+4.2.3.150	TPS	signature	NA	cembrene A synthase	
+4.2.3.151	TPS	signature	NA	pentamethylcyclopentadecatrienol synthase	
+4.2.3.16	TPS	signature	NA	(4S)-limonene synthase	
+4.2.3.17	TPS	signature	NA	taxadiene synthase	
+4.2.3.18	TPS	signature	NA	abietadiene synthase	
+4.2.3.19	TPS	signature	NA	ent-kaurene synthase	
+4.2.3.20	TPS	signature	NA	(R)-limonene synthase	
+4.2.3.21	TPS	signature	NA	vetispiradiene synthase	
+4.2.3.22	TPS	signature	NA	germacradienol synthase	
+4.2.3.23	TPS	signature	NA	germacrene-A synthase	
+4.2.3.24	TPS	signature	NA	"amorpha-4,11-diene synthase"	
+4.2.3.25	TPS	signature	NA	S-linalool synthase	
+4.2.3.26	TPS	signature	NA	R-linalool synthase	
+4.2.3.28	TPS	signature	NA	"ent-cassa-12,15-diene synthase"	
+4.2.3.29	TPS	signature	NA	ent-sandaracopimaradiene synthase	
+4.2.3.30	TPS	signature	NA	"ent-pimara-8(14),15-diene synthase"	
+4.2.3.31	TPS	signature	NA	"ent-pimara-9(11),15-diene synthase"	
+4.2.3.32	TPS	signature	NA	levopimaradiene synthase	
+4.2.3.33	TPS	signature	NA	stemar-13-ene synthase	
+4.2.3.34	TPS	signature	NA	stemod-13(17)-ene synthase	
+4.2.3.35	TPS	signature	NA	"syn-pimara-7,15-diene synthase"	
+4.2.3.37	TPS	signature	NA	epi-isozizaene synthase	
+4.2.3.38	TPS	signature	NA	alpha-bisabolene synthase	
+4.2.3.39	TPS	signature	NA	epi-cedrol synthase	
+4.2.3.40	TPS	signature	NA	(Z)-gamma-bisabolene synthase	
+4.2.3.41	TPS	signature	NA	elisabethatriene synthase 	
+4.2.3.42	TPS	signature	NA	aphidicolan-16beta-ol synthase 	
+4.2.3.43	TPS	signature	NA	"fusicocca-2,10(14)-diene synthase "	
+4.2.3.44	TPS	signature	NA	"isopimara-7,15-diene synthase "	
+4.2.3.45	TPS	signature	NA	phyllocladan-16alpha-ol synthase 	
+4.2.3.46	TPS	signature	NA	alpha-farnesene synthase 	
+4.2.3.47	TPS	signature	NA	beta-farnesene synthase 	
+4.2.3.48	TPS	signature	NA	"(3S,6E)-nerolidol synthase"	
+4.2.3.49	TPS	signature	NA	"(3R,6E)-nerolidol synthase"	
+4.2.3.50	TPS	signature	NA	"(+)-alpha-santalene synthase [(2Z,6Z)-farnesyl diphosphate cyclizing]"	
+4.2.3.51	TPS	signature	NA	beta-phellandrene synthase (neryl-diphosphate-cyclizing)	
+4.2.3.52	TPS	signature	NA	(4S)-beta-phellandrene synthase (geranyl-diphosphate-cyclizing)	
+4.2.3.53	TPS	signature	NA	"(+)-endo-beta-bergamotene synthase [(2Z,6Z)-farnesyl diphosphate cyclizing]"	
+4.2.3.54	TPS	signature	NA	"(-)-endo-alpha-bergamotene synthase [(2Z,6Z)-farnesyl diphosphate cyclizing]"	
+4.2.3.55	TPS	signature	NA	(S)-beta-bisabolene synthase	
+4.2.3.56	TPS	signature	NA	gamma-humulene synthase	
+4.2.3.57	TPS	signature	NA	beta-caryophyllene synthase	
+4.2.3.58	TPS	signature	NA	longifolene synthase	
+4.2.3.59	TPS	signature	NA	(E)-gamma-bisabolene synthase	
+4.2.3.6	TPS	signature	NA	trichodiene synthase 	
+4.2.3.60	TPS	signature	NA	germacrene C synthase	
+4.2.3.61	TPS	signature	NA	5-epiaristolochene synthase	
+4.2.3.62	TPS	signature	NA	(-)-gamma-cadinene synthase	
+4.2.3.63	TPS	signature	NA	(+)-cubenene synthase	
+4.2.3.64	TPS	signature	NA	(+)-epicubenol synthase	
+4.2.3.65	TPS	signature	NA	zingiberene synthase	
+4.2.3.66	TPS	signature	NA	beta-selinene cyclase	
+4.2.3.67	TPS	signature	NA	cis-muuroladiene synthase	
+4.2.3.67	TPS	signature	NA	cis-muuroladiene synthase	
+4.2.3.68	TPS	signature	NA	beta-eudesmol synthase	
+4.2.3.69	TPS	signature	NA	(+)-alpha-barbatene synthase	
+4.2.3.7	TPS	signature	NA	pentalenene synthase 	
+4.2.3.70	TPS	signature	NA	patchoulol synthase	
+4.2.3.71	TPS	signature	NA	"(E,E)-germacrene B synthase"	
+4.2.3.72	TPS	signature	NA	alpha-gurjunene synthase	
+4.2.3.73	TPS	signature	NA	valencene synthase	
+4.2.3.74	TPS	signature	NA	presilphiperfolanol synthase	
+4.2.3.75	TPS	signature	NA	(-)-germacrene D synthase	
+4.2.3.76	TPS	signature	NA	(+)-delta-selinene synthase	
+4.2.3.76	TPS	signature	NA	(+)-delta-selinene synthase	
+4.2.3.77	TPS	signature	NA	(+)-germacrene D synthase	
+4.2.3.78	TPS	signature	NA	beta-chamigrene synthase	
+4.2.3.79	TPS	signature	NA	thujopsene synthase	
+4.2.3.8	TPS	signature	NA	casbene synthase 	
+4.2.3.80	TPS	signature	NA	alpha-longipinene synthase	
+4.2.3.81	TPS	signature	NA	exo-alpha-bergamotene synthase	
+4.2.3.82	TPS	signature	NA	alpha-santalene synthase	
+4.2.3.83	TPS	signature	NA	beta-santalene synthase	
+4.2.3.84	TPS	signature	NA	10-epi-gamma-eudesmol synthase 	
+4.2.3.85	TPS	signature	NA	alpha-eudesmol synthase 	
+4.2.3.86	TPS	signature	NA	7-epi-alpha-selinene synthase	
+4.2.3.87	TPS	signature	NA	alpha-guaiene synthase	
+4.2.3.88	TPS	signature	NA	viridiflorene synthase	
+4.2.3.89	TPS	signature	NA	(+)-beta-caryophyllene synthase	
+4.2.3.9	TPS	signature	NA	aristolochene synthase 	
+4.2.3.90	TPS	signature	NA	5-epi-alpha-selinene synthase	
+4.2.3.91	TPS	signature	NA	cubebol synthase	
+4.2.3.92	TPS	signature	NA	(+)-gamma-cadinene synthase	
+4.2.3.93	TPS	signature	NA	delta-guaiene synthase	
+4.2.3.94	TPS	signature	NA	gamma-curcumene synthase	
+4.2.3.95	TPS	signature	NA	(–)-alpha-cuprenene synthase	
+4.2.3.96	TPS	signature	NA	avermitilol synthase	
+4.2.3.97	TPS	signature	NA	(–)-delta-cadinene synthase	
+4.2.3.98	TPS	signature	NA	(+)-T-muurolol synthase	
+4.2.3.99	TPS	signature	NA	labdatriene synthase	
+5.4.99.17	TPS	signature	NA	squalene—hopene cyclase	
+5.4.99.31	TPS	signature	NA	thalianol synthase	
+5.4.99.32	TPS	signature	NA	protostadienol synthase	
+5.4.99.33	TPS	signature	NA	cucurbitadienol synthase	
+5.4.99.34	TPS	signature	NA	germanicol synthase	
+5.4.99.35	TPS	signature	NA	taraxerol synthase	
+5.4.99.36	TPS	signature	NA	isomultiflorenol synthase	
+5.4.99.37	TPS	signature	NA	dammaradiene synthase	
+5.4.99.38	TPS	signature	NA	camelliol C synthase	
+5.4.99.39	TPS	signature	NA	beta-amyrin synthase	
+5.4.99.40	TPS	signature	NA	alpha-amyrin synthase	
+5.4.99.41	TPS	signature	NA	lupeol synthase	
+5.4.99.46	TPS	signature	NA	shionone synthase	
+5.4.99.47	TPS	signature	NA	parkeol synthase	
+5.4.99.48	TPS	signature	NA	achilleol B synthase	
+5.4.99.49	TPS	signature	NA	glutinol synthase	
+5.4.99.50	TPS	signature	NA	friedelin synthase	
+5.4.99.51	TPS	signature	NA	baccharis oxide synthase	
+5.4.99.52	TPS	signature	NA	alpha-seco-amyrin synthase	
+5.4.99.53	TPS	signature	NA	marneral synthase	
+5.4.99.54	TPS	signature	NA	beta-seco-amyrin synthase	
+5.4.99.55	TPS	signature	NA	delta-amyrin synthase	
+5.4.99.56	TPS	signature	NA	tirucalladienol synthase	
+5.4.99.57	TPS	signature	NA	baruol synthase	
+5.4.99.8	TPS	signature	NA	cycloartenol synthase	
+5.5.1.12	TPS	signature	NA	copalyl diphosphate synthase	
+5.5.1.13	TPS	signature	NA	ent-copalyl diphosphate synthase	
+5.5.1.14	TPS	signature	NA	syn-copalyl diphosphate synthase	
+5.5.1.15	TPS	signature	NA	terpentedienyl-diphosphate synthase	
+5.5.1.16	TPS	signature	NA	halimadienyl-diphosphate synthase	
+5.5.1.22	TPS	signature	NA	(-)-bornyl diphosphate synthase	
+5.5.1.8	TPS	signature	NA	(+)-bornyl diphosphate synthase	
+RXN-10598	TPS	signature	NA	beta-curcumene synthase	
+RXN-10601	TPS	signature	NA	patchoulene synthase	
+RXN-10602	TPS	signature	NA	patchoulene synthase	
+RXN-10603	TPS	signature	NA	patchoulol synthase	
+RXN-11778	TPS	signature	NA	ent-kaurene synthase	
+RXN-11779	TPS	signature	NA	ent-kaurene synthase	
+RXN-12516	TPS	signature	NA	alpha-bisabolol synthase	
+RXN-13373	TPS	signature	NA	isoitalicene synthase	
+RXN-13399	TPS	signature	NA	intermedeol synthase	
+RXN-13409	TPS	signature	NA	"selina-4,11-diene synthase"	
+RXN-13522	TPS	signature	NA	patchoulol synthase	
+RXN-17085	TPS	signature	NA	phomopsene synthase	
+RXN-5103	TPS	signature	NA	sabinene synthase	
+RXN-5105	TPS	signature	NA	alpha-thujene synthase	
+RXN-5122	TPS	signature	NA	2-carene synthase	
+RXN-5123	TPS	signature	NA	(Z)-beta-ocimene synthase	
+RXN-8419	TPS	signature	NA	isobazzanene synthase	
+RXN-8421	TPS	signature	NA	(+)-beta-barbatene synthase	
+RXN-8423	TPS	signature	NA	beta-acoradiene synthase	
+RXN-8428	TPS	signature	NA	alpha-chamigrene synthase	
+RXN-8431	TPS	signature	NA	delta-cuprenene synthase	
+RXN-8432	TPS	signature	NA	beta-elemene synthase	
+RXN-8542	TPS	signature	NA	sibirene synthase	
+RXN-8543	TPS	signature	NA	alpha-himachalene synthase	
+RXN-8544	TPS	signature	NA	beta-himachalene synthase	
+RXN-8545	TPS	signature	NA	gamma-himachalene synthase	
+RXN-8548	TPS	signature	NA	alpha-cubebene synthase	
+RXN-8554	TPS	signature	NA	"(Z,E)-germacrene B synthase"	
+RXN-8555	TPS	signature	NA	"seli-3,7(11)-diene synthase"	
+RXN-8557	TPS	signature	NA	"guaia-6,9-diene synthase"	
+RXN-8558	TPS	signature	NA	longicyclene synthase	
+RXN-8559	TPS	signature	NA	beta-longipinene synthase	
+RXN-8560	TPS	signature	NA	beta-gurjunene synthase	
+RXN-8571	TPS	signature	NA	longiborneol synthase	
+RXN-8573	TPS	signature	NA	cyclosativene synthase	
+RXN-8587	TPS	signature	NA	alpha-selinene synthase	
+RXN-8589	TPS	signature	NA	(+)-alpha-cadinene synthase	
+RXN-8594	TPS	signature	NA	(+)-delta-amorphene synthase	
+RXN-8598	TPS	signature	NA	(+)-alpha-amorphene synthase	
+RXN-8602	TPS	signature	NA	beta-ylangene synthase	
+RXN-8603	TPS	signature	NA	alpha-ylangene synthase	
+RXN-8622	TPS	signature	NA	sesquisabinene synthase	
+RXN-8931	TPS	signature	NA	"(Z,E)-alpha- farnesene synthase"	
+2.3.1.216	PKS	signature	NA	"5,7-dihydroxy-2-methylchromone synthase"	
+RXN-10735	PKS	signature	NA	octaketide synthase	
+RXN-10734	PKS	signature	NA	octaketide synthase	
+RXN-7342	PKS	signature	NA	aloesone synthase	
+RXN-10725	PKS	signature	NA	aloesone synthase	
+RXN-10733	PKS	signature	NA	aloesone synthase	
+2.3.1.212	PKS	signature	NA	benzalacetone synthase	
+RXN-10794	PKS	signature	NA	hexaketide pyrone synthase	
+RXN-9618	PKS	signature	NA	NA	
+RXN-9594	PKS	signature	NA	NA	
+2.3.1.220	PKS	signature	NA	NA	
+RXN-13662	PKS	signature	NA	NA	
+2.3.1.156	PKS	signature	NA	NA	
+RXN-9127	PKS	signature	NA	NA	
+RXN-7826	PKS	signature	NA	NA	
+RXN-10687	PKS	signature	NA	NA	
+RXN-7404	PKS	signature	NA	NA	
+RXN-7405	PKS	signature	NA	NA	
+2.3.1.151	PKS	signature	NA	NA	
+RXN-13663	PKS	signature	NA	NA	
+RXN-10796	PKS	signature	NA	NA	
+2.3.1.208	PKS	signature	NA	NA	
+2.3.1.218	PKS	signature	NA	NA	
+RXN-12183	PKS	signature	NA	NA	
+2.3.1.211	PKS	signature	NA	NA	
+2.3.1.177	PKS	signature	NA	NA	
+2.3.1.221	PKS	signature	NA	NA	
+2.3.1.170	PKS	signature	NA	NA	
+1.1.1.324	P450	tailoring	NA	8-hydroxygeraniol dehydrogenase	
+1.11.2.4	P450	tailoring	NA	fatty-acid peroxygenase	
+1.13.12.17	P450	tailoring	NA	dichloroarcyriaflavin A synthase	
+1.14.14.14	P450	tailoring	NA	aromatase	
+1.14.15.1	P450	tailoring	NA	camphor 5-monooxygenase	
+1.14.15.10	P450	tailoring	NA	(+)-camphor 6-endo-hydroxylase	
+1.14.15.11	P450	tailoring	NA	pentalenic acid synthase	
+1.14.15.12	P450	tailoring	NA	pimeloyl-[acyl-carrier protein] synthase	
+1.14.15.13	P450	tailoring	NA	pulcherriminic acid synthase	
+1.14.15.3	P450	tailoring	NA	alkane 1-monooxygenase	
+1.14.15.4	P450	tailoring	NA	steroid 11beta-monooxygenase	
+1.14.15.6	P450	tailoring	NA	cholesterol monooxygenase (side-chain-cleaving)	
+1.14.15.8	P450	tailoring	NA	steroid 15beta-monooxygenase	
+1.14.21.1	P450	tailoring	NA	(S)-stylopine synthase	
+1.14.21.2	P450	tailoring	NA	(S)-cheilanthifoline synthase	
+1.14.21.4	P450	tailoring	NA	salutaridine synthase	
+1.14.21.7	P450	tailoring	NA	biflaviolin synthase	
+1.14.21.9	P450	tailoring	NA	mycocyclosin synthase	
+1.14.99.10	P450	tailoring	NA	steroid 21-monooxygenase	
+1.14.99.15	P450	tailoring	NA	4-methoxybenzoate monooxygenase (O-demethylating)	
+1.14.99.43	P450	tailoring	NA	beta-amyrin 24-hydroxylase	
+1.14.99.45	P450	tailoring	NA	carotene ?-monooxygenase	
+1.14.99.9	P450	tailoring	NA	steroid 17alpha-monooxygenase	
+4.1.2.30	P450	tailoring	NA	17alpha-Hydroxyprogesterone aldolase	
+4.2.1.121	P450	tailoring	NA	colneleate synthase	
+RXN-11911	P450	tailoring	NA	DMNT synthase	
+RXN-8620	P450	tailoring	NA	TMTT  synthase	
+RXN-9637	P450	tailoring	NA	thalian-diol desaturase	
+RXN-11412	P450	tailoring	NA	"CYP83A1, CYP83B1"	
+RXN-779	P450	tailoring	NA	"CYP85A1, CYP85A2, CYP85A3, "	
+RXN0-4281	P450	tailoring	NA	CYP2E1	
+RXN-774	P450	tailoring	NA	CYP90A1	
+RXN-777	P450	tailoring	NA	"CYP90C1, CYP90D1"	
+RXN-716	P450	tailoring	NA	CYP90A1	
+RXN-11260	P450	tailoring	NA	CYP98A8	
+RXN-11262	P450	tailoring	NA	CYP98A8	
+RXN-719	P450	tailoring	NA	"CYP90C1, CYP90D1"	
+UNSPECIFIC-MONOOXYGENASE-RXN	P450	tailoring	NA	"CYP2A6, CYP2B6"	
+1.1.3.36-RXN	P450	tailoring	NA	"CYP719A1, CYP719A21, CYP719A13"	
+RXN-3763	P450	tailoring	NA	pseudobaptigenin synthase	
+RXN-5961	P450	tailoring	NA	CYP97A3	
+RXN-1403	P450	tailoring	NA	CYP71A13	
+RXN-9640	P450	tailoring	NA	"CYP79D1, CYP79D2"	
+RXN-5066	P450	tailoring	NA	"CYP79D3, CYP79D4"	
+RXN-9641	P450	tailoring	NA	CYP71E7	
+RXN-5081	P450	tailoring	NA	CYP71E7	
+RXN-11413	P450	tailoring	NA	CYP83B1	
+RXN-12240	P450	tailoring	NA	CYP71E1	
+RXN-1103	P450	tailoring	NA	CYP98A3	
+RXN-11414	P450	tailoring	NA	CYP83A1	
+RXN-11415	P450	tailoring	NA	CYP83A1	
+RXN-11416	P450	tailoring	NA	CYP83A1	
+RXN-11417	P450	tailoring	NA	CYP83A1	
+RXN-11418	P450	tailoring	NA	CYP83A1	
+RXN-11419	P450	tailoring	NA	CYP83A1	
+RXN-8508	P450	tailoring	NA	CYP720B1	
+RXN-1022	P450	tailoring	NA	CYP96A15	
+RXN-11541	P450	tailoring	NA	CYP734A1 	
+RXN-11540	P450	tailoring	NA	CYP734A1 	
+RXN-8275	P450	tailoring	NA	CYP71B15	
+RXN1F-160	P450	tailoring	NA	CYP88A6	
+1.14.13.79-RXN	P450	tailoring	NA	CYP88A6	
+RXN-7580	P450	tailoring	NA	"CYP701A3, CYP701A10"	
+1.14.13.78-RXN	P450	tailoring	NA	"CYP701A3, CYP701A10"	
+RXN-5242	P450	tailoring	NA	"CYP701A3, CYP701A10"	
+RXN1F-161	P450	tailoring	NA	CYP88A6	
+RXN-2162	P450	tailoring	NA	CYP81F2	
+RXN-11666	P450	tailoring	NA	CYP71B15	
+RXN-9636	P450	tailoring	NA	"CYP79D3, CYP79D4"	
+TYROSINE-N-MONOOXYGENASE-RXN	P450	tailoring	NA	CYP79A1	
+RXN-5063	P450	tailoring	NA	"CYP79D1, CYP79D2"	
+RXN-9639	P450	tailoring	NA	"CYP79D1, CYP79D2, CYP79D3, CYP79D4"	
+RXN-12063	P450	tailoring	NA	CYP79B3	
+RXN-7749	P450	tailoring	NA	CYP79A1	
+RXN-5065	P450	tailoring	NA	"CYP79D1, CYP79D2"	
+RXN-12991	P450	tailoring	NA	"CYP79F1, CYP79F2"	
+RXN-13005	P450	tailoring	NA	"CYP79F1, CYP79F2"	
+RXN-9638	P450	tailoring	NA	"CYP79D3, CYP79D4"	
+RXN-12062	P450	tailoring	NA	"CYP79B1, CYP79B2, CYP79B3"	
+RXN-7748	P450	tailoring	NA	CYP79A1	
+RXN-5064	P450	tailoring	NA	"CYP79D1, CYP79D2"	
+RXN-4306	P450	tailoring	NA	"CYP735A1, CYP735A2"	
+RXN-4308	P450	tailoring	NA	"CYP735A1, CYP735A2"	
+RXN-4304	P450	tailoring	NA	"CYP735A1, CYP735A2"	
+RXN-13808	P450	tailoring	NA	CYP82X2	
+1.14.13.* (excluding the ones classified as signature enzymes)	P450	tailoring	NA	NA	
+1.14.11.* (excluding the ones classified as signature enzymes)	2ODD	tailoring	NA	NA	
+2.1.1.* (excluding the ones classified as signature enzymes)	methyltransferase	other tailoring	NA	NA	
+2.3.1.* (excluding the ones classified as signature enzymes)	acyltransferase	other tailoring	NA	NA	
+2.4.*	glycosyltransferase	other tailoring	NA	NA	

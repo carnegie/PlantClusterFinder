@@ -1,0 +1,84 @@
+# 
+#
+# Authors:
+#    Bo Xue
+#    Pascal Schlapfer
+#    Seung Yon Rhee
+#    Peifen Zhang
+#
+# Please see the license agreement regarding the use of and distribution of this file.
+# The format of this file is defined at http://bioinformatics.ai.sri.com/ptools/flatfile-format.html .
+#
+# Species: Coccomyxa subellipsoidea C-169
+# Database: CsubellipsoideaCyc
+# Version: 1.0
+# File Name: transporters.col
+# Date and time generated: April 18, 2017, 22:04:10
+#
+UNIQUE-ID	NAME	REACTION-EQUATION	SUBUNIT-COMPOSITION
+G4S-2185-MONOMER	16703	a long-chain acyl-CoA[cytosol] + ATP + H2O  <-->  a long-chain acyl-CoA[cytosol] + ADP + phosphate + H+	1*G4S-2185-MONOMER
+G4S-3824-MONOMER	55395	L-methionine S-oxide[out] + ATP + H2O  <-->  L-methionine S-oxide[in] + ADP + phosphate + H+	1*G4S-3824-MONOMER
+G4S-3579-MONOMER	48534	L-cysteine[in] + ATP + H2O  <-->  L-cysteine[out] + ADP + phosphate + H+	1*G4S-3579-MONOMER
+		alpha-D-Man-(1->2)-alpha-D-Man-(1->2)-alpha-D-Man-(1->3)-[alpha-D-Man-(1->6)]-beta-D-Man-(1->4)-beta-D-GlcNAc-(1->4)-alpha-D-GlcNAc-diphosphodolichol[in]  <-->  alpha-D-Man-(1->2)-alpha-D-Man-(1->2)-alpha-D-Man-(1->3)-[alpha-D-Man-(1->6)]-beta-D-Man-(1->4)-beta-D-GlcNAc-(1->4)-alpha-D-GlcNAc-diphosphodolichol[out]	
+G4S-2372-MONOMER	3520	selenite[out] + ATP + H2O  <-->  selenite[in] + ADP + phosphate + H+	1*G4S-2372-MONOMER
+G4S-4232-MONOMER	39752	aldehydo-L-galactonate[out] + H+[out]  <-->  aldehydo-L-galactonate[in] + H+[in]	1*G4S-4232-MONOMER
+G4S-4065-MONOMER	36047	a cobalamin[out] + ATP + H2O  <-->  a cobalamin[in] + ADP + phosphate	1*G4S-4065-MONOMER
+G4S-3099-MONOMER	21188	a phospholipid[in] + ATP + H2O  <-->  a phospholipid[out] + ADP + phosphate + H+	1*G4S-3099-MONOMER
+G4S-2478-MONOMER	35453	sulfate[out] + ATP + H2O  <-->  sulfate[in] + ADP + phosphate + H+	1*G4S-2478-MONOMER
+G4S-3421-MONOMER	11131	sn-glycerol 3-phosphate[out] + ATP + H2O  <-->  sn-glycerol 3-phosphate[in] + ADP + phosphate + H+	1*G4S-3421-MONOMER
+G4S-2471-MONOMER	32675	glucose[in]  <-->  glucose[out]	1*G4S-2471-MONOMER
+G4S-2568-MONOMER	29996	L-citrulline[in]  <-->  L-citrulline[out]	1*G4S-2568-MONOMER
+G4S-3791-MONOMER	29034	arsenite[in] + ATP + H2O  <-->  arsenite[out] + ADP + phosphate + H+	1*G4S-3791-MONOMER
+G4S-3824-MONOMER	55395	N-acetyl-DL-methionine[out] + ATP + H2O  <-->  N-acetyl-DL-methionine[in] + ADP + phosphate + H+	1*G4S-3824-MONOMER
+G4S-3163-MONOMER	67343	ATP + L-aspartate[out] + H2O  <-->  L-aspartate[in] + ADP + phosphate + H+	1*G4S-3163-MONOMER
+		L-ornithine[in]  <-->  L-ornithine[out]	
+G4S-2944-MONOMER	34798	ATP + D-ribopyranose[out] + H2O  <-->  ADP + D-ribopyranose[in] + phosphate + H+	1*G4S-2944-MONOMER
+G4S-3737-MONOMER	1142	Zn2+[in] + ATP + H2O  <-->  Zn2+[out] + ADP + phosphate + H+	1*G4S-3737-MONOMER
+G4S-3579-MONOMER	48534	glutathione[in] + ATP + H2O  <-->  glutathione[out] + ADP + phosphate + H+	1*G4S-3579-MONOMER
+G4S-3099-MONOMER	21188	a lipopolysaccharide[in] + ATP + H2O  <-->  a lipopolysaccharide[out] + ADP + phosphate + H+	1*G4S-3099-MONOMER
+G4S-3603-MONOMER	54290	Cu2+[out] + ATP + H2O  <-->  Cu2+[in] + ADP + phosphate + H+	1*G4S-3603-MONOMER
+G4S-2525-MONOMER	10367	ATP + putrescine[out] + H2O  <-->  ADP + putrescine[in] + phosphate + H+	1*G4S-2525-MONOMER
+G4S-4020-MONOMER	21165	L-leucine[in] + H+[out]  <-->  L-leucine[out] + H+[in]	1*G4S-4020-MONOMER
+G4S-2837-MONOMER	38605	ATP + L-alanyl-gamma-D-glutamyl-meso-diaminopimelate[out] + H2O  <-->  L-alanyl-gamma-D-glutamyl-meso-diaminopimelate[in] + ADP + phosphate + H+	1*G4S-2837-MONOMER
+G4S-2232-MONOMER	46284	a xenobiotic[in] + ATP + H2O  <-->  a xenobiotic[out] + ADP + phosphate	1*G4S-2232-MONOMER
+G4S-4167-MONOMER	44614	a tripeptide[out] + H+[out]  <-->  a tripeptide[in] + H+[in]	1*G4S-4167-MONOMER
+G4S-2338-MONOMER	54617	ATP + phosphate[out] + H2O  <-->  ADP + 2 phosphate[in] + H+	1*G4S-2338-MONOMER
+		a dolichyl beta-D-glucosyl phosphate[in]  <-->  a dolichyl beta-D-glucosyl phosphate[out]	
+G4S-2559-MONOMER	44355	acetate[out] + H+[out]  <-->  acetate[in] + H+[in]	1*G4S-2559-MONOMER
+G4S-3459-MONOMER	31297	Ca2+[in] + ATP + H2O  <-->  Ca2+[out] + ADP + phosphate + H+	1*G4S-3459-MONOMER
+G4S-3310-MONOMER	47590	Cu2+[in] + ATP + H2O  <-->  Cu2+[out] + ADP + phosphate + H+	1*G4S-3310-MONOMER
+G4S-2307-MONOMER	1342	an (aminoalkyl)phosphonate[out] + ATP + H2O  <-->  an (aminoalkyl)phosphonate[in] + ADP + phosphate + H+	1*G4S-2307-MONOMER
+G4S-3154-MONOMER	66699	Mn2+[out] + ATP + H2O  <-->  Mn2+[in] + ADP + phosphate + H+	1*G4S-3154-MONOMER
+G4S-3003-MONOMER	27760	ATP + L-arginine[out] + H2O  <-->  ADP + L-arginine[in] + phosphate + H+	1*G4S-3003-MONOMER
+G4S-3074-MONOMER	53156	an Fe(III)-siderophore[out] + ATP + H2O  <-->  an Fe(III)-siderophore[in] + ADP + phosphate + H+	1*G4S-3074-MONOMER
+G4S-2568-MONOMER	29996	L-ornithine[in]  <-->  L-ornithine[out]	1*G4S-2568-MONOMER
+G4S-3163-MONOMER	67343	a polar amino acid[out] + ATP + H2O  <-->  a polar amino acid[in] + ADP + phosphate	1*G4S-3163-MONOMER
+G4S-4167-MONOMER	44614	a dipeptide[out] + H+[out]  <-->  a dipeptide[in] + H+[in]	1*G4S-4167-MONOMER
+G4S-3723-MONOMER	62823	molybdate[out] + ATP + H2O  <-->  molybdate[in] + ADP + phosphate + H+	1*G4S-3723-MONOMER
+G4S-2372-MONOMER	3520	ATP + thiosulfate[out] + H2O  <-->  ADP + thiosulfate[in] + phosphate + H+	1*G4S-2372-MONOMER
+G4S-2559-MONOMER	44355	succinate[out] + 2 H+[out]  <-->  succinate[in] + 2 H+[in]	1*G4S-2559-MONOMER
+G4S-2265-MONOMER	37959	Cd2+[out] + ATP + H2O  <-->  Cd2+[in] + ADP + phosphate + H+	1*G4S-2265-MONOMER
+G4S-2357-MONOMER	16800	ATP + H+[in] + H2O  <-->  ADP + phosphate + 2 H+[out]	1*G4S-2357-MONOMER
+G4S-2669-MONOMER	42319	a quaternary amine[out] + ATP + H2O  <-->  a quaternary amine[in] + ADP + phosphate + H+	1*G4S-2669-MONOMER
+G4S-2735-MONOMER	47532	ammonium[out]  <-->  ammonium[in]	1*G4S-2735-MONOMER
+G4S-3074-MONOMER	53156	ATP + a ferric hydroxamate complex[out] + H2O  <-->  ADP + a ferric hydroxamate complex[in] + phosphate	1*G4S-3074-MONOMER
+G4S-2741-MONOMER	48924	thiamine diphosphate + phosphate + n H+[out]  <-->  thiamine triphosphate + H2O + n H+[in]	1*G4S-2741-MONOMER
+G4S-2372-MONOMER	3520	selenate[out] + ATP + H2O  <-->  selenate[in] + ADP + phosphate + H+	1*G4S-2372-MONOMER
+G4S-3051-MONOMER	60997	maltose[out] + ATP + H2O  <-->  maltose[in] + ADP + phosphate + H+	1*G4S-3051-MONOMER
+G4S-2307-MONOMER	1342	ATP + an alkylphosphonate[out] + H2O  <-->  ADP + an alkylphosphonate[in] + phosphate + H+	1*G4S-2307-MONOMER
+G4S-3824-MONOMER	55395	ATP + D-methionine[out] + H2O  <-->  ADP + D-methionine[in] + phosphate + H+	1*G4S-3824-MONOMER
+		a dolichyl beta-D-mannosyl phosphate[in]  <-->  a dolichyl beta-D-mannosyl phosphate[out]	
+G4S-2455-MONOMER	39500	Mg2+[out] + ATP + H2O  <-->  Mg2+[in] + ADP + phosphate + H+	1*G4S-2455-MONOMER
+G4S-3310-MONOMER	47590	Cu+[in] + ATP + H2O  <-->  Cu+[out] + ADP + phosphate + H+	1*G4S-3310-MONOMER
+		4 H+[in]  <-->  4 H+[out]	
+G4S-3463-MONOMER	14575	Fe3+[out] + ATP + H2O  <-->  Fe3+[in] + ADP + phosphate + H+	1*G4S-3463-MONOMER
+G4S-2944-MONOMER	34798	a monosaccharide[out] + ATP + H2O  <-->  a monosaccharide[in] + ADP + phosphate	1*G4S-2944-MONOMER
+G4S-3824-MONOMER	55395	ATP + L-methionine[out] + H2O  <-->  ADP + L-methionine[in] + phosphate + H+	1*G4S-3824-MONOMER
+G4S-2360-MONOMER	11622	ATP[out] + ADP[in] + phosphate[in]  <-->  ATP[in] + ADP[out] + phosphate[out]	1*G4S-2360-MONOMER
+G4S-3144-MONOMER	1026	K+[in]  <-->  K+[out]	1*G4S-3144-MONOMER
+		2 H+[in]  <-->  2 H+[out]	
+G4S-3099-MONOMER	21188	lipid A-core[in] + ATP + H2O  <-->  lipid A-core[out] + ADP + phosphate + H+	1*G4S-3099-MONOMER
+G4S-2153-MONOMER	28997	ADP + phosphate + 4 H+[out]  <-->  ATP + H2O + 3 H+[in]	1*G4S-2153-MONOMER
+		L-citrulline[in]  <-->  L-citrulline[out]	
+G4S-4020-MONOMER	21165	L-methionine[in] + H+[out]  <-->  L-methionine[out] + H+[in]	1*G4S-4020-MONOMER
+G4S-3154-MONOMER	66699	Ca2+[out] + ATP + H2O  <-->  Ca2+[in] + ADP + phosphate + H+	1*G4S-3154-MONOMER

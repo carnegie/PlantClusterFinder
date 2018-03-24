@@ -4421,7 +4421,7 @@ end
 % Outputs: 
 %   None (File with list of sequencing gaps numbers is generated with
 %   ending _count)
-function f_analyze_PlantClusterGapFile(vFileIn, vUnmaskedDNA)
+function f_analyze_PlantClusterGapFile(vFileIn, vUnmaskedDNA, vVerbose)
     vInit = 7000000;
     [vFIN,vFINERR] = fopen(vFileIn);
     if vFIN == -1

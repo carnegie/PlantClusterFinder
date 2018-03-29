@@ -2098,7 +2098,7 @@ function f_get_Sequencing_Gaps(vFile, vPara, vVerbose, vOverwriteSeqGapInfo, vUn
             fprintf('Check awk installation.\n');
         end;
         [~, vAWK_install_path] = system(['which awk']);
-        if strncmp(vAWK_install_path,'/usr/bin/which: no which',24)
+        if strncmp(vAWK_install_path,'/usr/bin/which: no awk',22)
             error('No awk installed. Abort.\n');
         else
             vAWK_install_path = regexprep(vAWK_install_path,'\n','');

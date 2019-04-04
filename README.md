@@ -44,7 +44,7 @@ Authors: Pascal Schlapfer, December 2017
  
     'GenesDat_GeneInfo': needs to be followed by a list of Attributes in genes.dat. Defines where gene ID information should be searched for. Default is 'Unique-ID', 'Accession-1', 'Accession-2'
     
-    'MCLClusterFile': needs to be followed by either 1 or 0. Default is 0 which indicates that the input file is not a protein fasta file, but a precomputed MCL clustering file (precomputing can be usefull for speed). If such a file is used, then nothing but gene IDs and tabs and new lines are allowed in this file.
+    'MCLClusterFile': needs to be followed by either 1 or 0. With a default of 0. 1 indicates that the input file is not a protein fasta file, but a precomputed MCL clustering file (precomputing can be usefull for speed). If such a file is used, then nothing but gene IDs and tabs and new lines are allowed in this file.
                      
     'HypoGenePercentile': needs to be followed by a number. Defines the length of sequencing gap that should be populated by two hypothetical genes. If this is 10, then two hypothetical genes are introduced as soon as the sequencing gap exceeds the (100-10) lower percentile of the background size of all genes of the genome (default is 5).
     

@@ -2162,7 +2162,7 @@ function f_get_Sequencing_Gaps(vFile, vPara, vVerbose, vOverwriteSeqGapInfo, vUn
     %Produce the Gap analysis file
     [~,vOutput] = system(['ls' ' ' '''' vFile '_GAPOutput_count.txt''']);
     if vOverwriteSeqGapInfo == 1 || strncmp(vOutput,'ls: cannot access', 17)
-        f_analyze_PlantClusterGapFile([vFile '_GAPOutput'], vUnmaskedDNA, vVerbose);
+        f_analyze_PlantClusterGapFile(strcat(vFile, '_GAPOutput'), vUnmaskedDNA, vVerbose);
     else
         if vVerbose >= 1
             fprintf('File %s exists, not overwritten.\n', ['''' vFile '_GAPOutput_count.txt''']);

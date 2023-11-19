@@ -39,7 +39,8 @@ Authors: Pascal Schlapfer, December 2017
     
     -cout fullpath: Path and file name to the cluster-Outputfile, make sure you have access to the file and folder. This is the second Results output file that will be generated.
  
- 
+ **Note**: If MCL cluster file isn't provided, pipeline would require [BLAST+](https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html) and [MCL](https://micans.org/mcl/) need to be installed.
+
  Optional Inputs:
  
     'GenesDat_GeneInfo': needs to be followed by a list of Attributes in genes.dat. Defines where gene ID information should be searched for. Default is 'Unique-ID', 'Accession-1', 'Accession-2'

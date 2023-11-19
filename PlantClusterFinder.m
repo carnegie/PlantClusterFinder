@@ -1976,8 +1976,10 @@ function vSeqGaps = f_annotate_Sequencing_Gaps(vFile, vInterGeneLocation, vUniqu
             f_get_Sequencing_Gaps(vFile, vPara, vVerbose, vOverwriteSeqGapInfo, vUnmaskedDNA)
         end
     else
-        [~,vOutput] = system(['ls' ' ' '''' vFile '_GAPOutput''']);
-        if strncmp(vOutput,'ls: cannot access', 17) || vOverwriteSeqGapInfo
+        % Original way to test file existence, 
+        % [~,vOutput] = system(['ls' ' ' '''' vFile '_GAPOutput''']);
+        % if strncmp(vOutput,'ls: cannot access', 17) 
+        if exist([vFile '_GAPOutput'], 'file') ~= 2 || vOverwriteSeqGapInfo
             f_get_Sequencing_Gaps(vFile, vPara, vVerbose, vOverwriteSeqGapInfo, vUnmaskedDNA)
         end
     end
@@ -2160,9 +2162,9 @@ function f_get_Sequencing_Gaps(vFile, vPara, vVerbose, vOverwriteSeqGapInfo, vUn
     end
 
     %Produce the Gap analysis file
-    [~,vOutput] = system(['ls' ' ' '''' vFile '_GAPOutput_count.txt''']);
-    if vOverwriteSeqGapInfo == 1 || strncmp(vOutput,'ls: cannot access', 17)
-        f_analyze_PlantClusterGapFile(strcat(vFile, '_GAPOutput'), vUnmaskedDNA, vVerbose);
+    % [~,vOutput] = system(['ls' ' ' '''' vFile '_GAPOutput_count.txt''']);
+    if vOverwriteSeqGapInfo == 1 || exist([vFile '_GAPOutput'], 'file') ~= 2
+        f_analyze_PlantClusterGapFile([vFile '_GAPOutput'], vUnmaskedDNA, vVerbose);
     else
         if vVerbose >= 1
             fprintf('File %s exists, not overwritten.\n', ['''' vFile '_GAPOutput_count.txt''']);
@@ -2189,11 +2191,10 @@ end
 %                         0, no enforcement).
 % 
 % Outputs: 
-%   None (Temporary (_temp1, _temp2, _temp3, _temp4) and Gapouptu
+%   None (Temporary (_temp1, _temp2, _temp3, _temp4) and Gapouput
 %        (_GAPOutput) files generated.
 function f_run_awk_skripts(vFile, vAWK_install_path, vVerbose, vOverwriteSeqGapInfo)
-    [~,vOutput] = system(['ls' ' ' '''' vFile '_temp1''']);
-    if vOverwriteSeqGapInfo == 1 || strncmp(vOutput,'ls: cannot access', 17)
+    if vOverwriteSeqGapInfo == 1 || exist([vFile '_temp1'], 'file') ~= 2
         if vVerbose >= 2
             fprintf('Next command running:\n');
             fprintf([vAWK_install_path ' ' '-f enter_new_line_characters_in_fasta_file.awk' ' ' '''' vFile '''>''' vFile '_temp1''']);
@@ -2210,8 +2211,7 @@ function f_run_awk_skripts(vFile, vAWK_install_path, vVerbose, vOverwriteSeqGapI
             fprintf('File %s exists, not overwritten.\n', ['''' vFile '_temp1''']);
         end
     end
-    [~,vOutput] = system(['ls' ' ' '''' vFile '_temp2''']);
-    if vOverwriteSeqGapInfo == 1 || strncmp(vOutput,'ls: cannot access', 17)
+    if vOverwriteSeqGapInfo == 1 || exist([vFile '_temp2'], 'file') ~= 2
         if vVerbose >= 2
             fprintf('Next command running:\n');
             fprintf(['tr -d ''\r'' <' ' ' '''' vFile '_temp1''>''' vFile '_temp2''']);
@@ -2228,8 +2228,7 @@ function f_run_awk_skripts(vFile, vAWK_install_path, vVerbose, vOverwriteSeqGapI
             fprintf('File %s exists, not overwritten.\n', ['''' vFile '_temp2''']);
         end
     end
-    [~,vOutput] = system(['ls' ' ' '''' vFile '_temp3''']);
-    if vOverwriteSeqGapInfo == 1 || strncmp(vOutput,'ls: cannot access', 17)
+    if vOverwriteSeqGapInfo == 1 || exist([vFile '_temp3'], 'file') ~= 2
         if vVerbose >= 2
             fprintf('Next command running:\n');
             fprintf(['tr -d ''\n'' <' ' ' '''' vFile '_temp2''>''' vFile '_temp3''']);
@@ -2247,8 +2246,7 @@ function f_run_awk_skripts(vFile, vAWK_install_path, vVerbose, vOverwriteSeqGapI
         end
     end
 
-    [~,vOutput] = system(['ls' ' ' '''' vFile '_temp4''']);
-    if vOverwriteSeqGapInfo == 1 || strncmp(vOutput,'ls: cannot access', 17)
+    if vOverwriteSeqGapInfo == 1 || exist([vFile '_temp4'], 'file') ~= 2
         if vVerbose >= 2
             fprintf('Next command running:\n');
             fprintf([vAWK_install_path ' ' '-f get_new_line_in.awk' ' ' '''' vFile '_temp3''>''' vFile '_temp4''']);
@@ -2268,8 +2266,7 @@ function f_run_awk_skripts(vFile, vAWK_install_path, vVerbose, vOverwriteSeqGapI
 
     % Search for sequencing gaps (searches for continuous stretches of
     % ATCGatcg* and Nn s, and lists them in a new file
-    [~,vOutput] = system(['ls' ' ' '''' vFile '_GAPOutput''']);
-    if vOverwriteSeqGapInfo == 1 || strncmp(vOutput,'ls: cannot access', 17)
+    if vOverwriteSeqGapInfo == 1 || exist([vFile '_GAPOutput'], 'file') ~= 2
         if vVerbose >= 2
             fprintf('Next command running:\n');
             fprintf([vAWK_install_path ' ' '-f get_positions_of_gap.awk' ' ' '''' vFile '_temp4''>''' vFile '_GAPOutput''']);

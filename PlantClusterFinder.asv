@@ -1148,7 +1148,7 @@ function PlantClusterFinder(varargin)
             if vMaxInterGeneDist ~= -1 || vMaxSeqGapSize ~= -1 || size(vSeqGapSizesChromBreak,2) ~= 0 || vPercentileForMaxInterGeneDist ~= -1 ||  vMaxInterGeneDistByMedian~= -1
                 fprintf('Prevent clusters:\n');
                 if vMaxSeqGapSize ~= -1
-                    fprintf(['Prevent clusters spanning sequencing gaps longer or equal than %ibp\n'], vMaxSeqGapSize);
+                    fprintf('Prevent clusters spanning sequencing gaps longer or equal than %ibp\n', vMaxSeqGapSize);
                 end
                 if size(vSeqGapSizesChromBreak,2) ~= 0
                     vNumbers = num2str(vSeqGapSizesChromBreak(1,1));
@@ -1161,13 +1161,13 @@ function PlantClusterFinder(varargin)
                     end
                 end
                 if vMaxInterGeneDist ~= -1
-                    fprintf(['Prevent clusters spanning intergenic distances longer or equal than %ibp\n'], vMaxInterGeneDist);
+                    fprintf('Prevent clusters spanning intergenic distances longer or equal than %ibp\n', vMaxInterGeneDist);
                 end
                 if vPercentileForMaxInterGeneDist ~= -1
-                    fprintf(['Prevent clusters spanning the top %i%% intergenic distances\n'], vPercentileForMaxInterGeneDist);
+                    fprintf('Prevent clusters spanning the top %i%% intergenic distances\n', vPercentileForMaxInterGeneDist);
                 end
                 if vMaxInterGeneDistByMedian ~= -1
-                    fprintf(['Prevent clusters spanning intergenic distances longer or equal than %i * the median of gene sizes\n'], vMaxInterGeneDistByMedian);
+                    fprintf('Prevent clusters spanning intergenic distances longer or equal than %i * the median of gene sizes\n', vMaxInterGeneDistByMedian);
                 end
             end
         end
@@ -1377,7 +1377,7 @@ function PlantClusterFinder(varargin)
                 vPartFinished_old_1 = vPartFinished;
                 load([vGeneLocation_File '_tempsave.mat'],'vPartFinished')
                 if vPartFinished_old_1 > vPartFinished
-                    vPartFinished = vPartFinished_old_1;
+                    vPartFinished = vPartFinished_old_1; %#ok<NASGU>
                     clear vPartFinished_old
                     save([vGeneLocation_File '_tempsave.mat'],'-regexp','^(?!vRunAfterPart$).','-v7.3');
                 end
@@ -1705,9 +1705,6 @@ function [vGeneLocation2, vGeneLocation_Att, vInterChrom, vBiomG_G] = ...
         vEnd_GeneLocation2 = size(vGeneLocation2.(char(vGeneLocation_Att(1,1))),1);
         vEnd_GeneLocation3 = size(vGeneLocation3.(char(vGeneLocation_Att(1,1))),1);
         for vi = size(vSeqGaps,1):-1:1
-            if vi == 34
-                vStop = 1;
-            end
             if vVerbose >= 2
                 fprintf('Populate hypothetical genes: %i of %i\n', vNi - vi + 1, vNi);
             end
@@ -1979,8 +1976,9 @@ function vSeqGaps = f_annotate_Sequencing_Gaps(vFile, vInterGeneLocation, vUniqu
             f_get_Sequencing_Gaps(vFile, vPara, vVerbose, vOverwriteSeqGapInfo, vUnmaskedDNA)
         end
     else
-        [~,vOutput] = system(['ls' ' ' '''' vFile '_GAPOutput''']);
-        if strncmp(vOutput,'ls: cannot access', 17) || vOverwriteSeqGapInfo
+        % Original way to test file existence, [~,vOutput] = system(['ls' ' ' '''' vFile '_GAPOutput''']);
+        % if strncmp(vOutput,'ls: cannot access', 17) 
+        if exist([vFile '_GAPOutput'], 'file') ~= 2 || vOverwriteSeqGapInfo
             f_get_Sequencing_Gaps(vFile, vPara, vVerbose, vOverwriteSeqGapInfo, vUnmaskedDNA)
         end
     end
@@ -2054,8 +2052,8 @@ function vSeqGaps = f_annotate_Sequencing_Gaps(vFile, vInterGeneLocation, vUniqu
         end
     end
     vSeqGaps = vSeqGaps(~vKillSeqGaps,:);
-    vSeqGaps_3 = vSeqGaps_3(~vKillSeqGaps,:);
-    vSeqGaps_4 = vSeqGaps_4(~vKillSeqGaps,:);
+%     vSeqGaps_3 = vSeqGaps_3(~vKillSeqGaps,:);
+%     vSeqGaps_4 = vSeqGaps_4(~vKillSeqGaps,:);
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2097,7 +2095,7 @@ function f_get_Sequencing_Gaps(vFile, vPara, vVerbose, vOverwriteSeqGapInfo, vUn
         if vVerbose >= 1
             fprintf('Check awk installation.\n');
         end
-        [~, vAWK_install_path] = system(['which awk']);
+        [~, vAWK_install_path] = system('which awk');
         if strncmp(vAWK_install_path,'/usr/bin/which: no awk',22)
             error('No awk installed. Abort.\n');
         else
@@ -2163,8 +2161,8 @@ function f_get_Sequencing_Gaps(vFile, vPara, vVerbose, vOverwriteSeqGapInfo, vUn
     end
 
     %Produce the Gap analysis file
-    [~,vOutput] = system(['ls' ' ' '''' vFile '_GAPOutput_count.txt''']);
-    if vOverwriteSeqGapInfo == 1 || strncmp(vOutput,'ls: cannot access', 17)
+    % [~,vOutput] = system(['ls' ' ' '''' vFile '_GAPOutput_count.txt''']);
+    if vOverwriteSeqGapInfo == 1 || exist([vFile '_GAPOutput'], 'file') ~= 2
         f_analyze_PlantClusterGapFile([vFile '_GAPOutput'], vUnmaskedDNA, vVerbose);
     else
         if vVerbose >= 1
@@ -2192,11 +2190,10 @@ end
 %                         0, no enforcement).
 % 
 % Outputs: 
-%   None (Temporary (_temp1, _temp2, _temp3, _temp4) and Gapouptu
+%   None (Temporary (_temp1, _temp2, _temp3, _temp4) and Gapouput
 %        (_GAPOutput) files generated.
 function f_run_awk_skripts(vFile, vAWK_install_path, vVerbose, vOverwriteSeqGapInfo)
-    [~,vOutput] = system(['ls' ' ' '''' vFile '_temp1''']);
-    if vOverwriteSeqGapInfo == 1 || strncmp(vOutput,'ls: cannot access', 17)
+    if vOverwriteSeqGapInfo == 1 || exist([vFile '_temp1'], 'file') ~= 2
         if vVerbose >= 2
             fprintf('Next command running:\n');
             fprintf([vAWK_install_path ' ' '-f enter_new_line_characters_in_fasta_file.awk' ' ' '''' vFile '''>''' vFile '_temp1''']);
@@ -2213,8 +2210,7 @@ function f_run_awk_skripts(vFile, vAWK_install_path, vVerbose, vOverwriteSeqGapI
             fprintf('File %s exists, not overwritten.\n', ['''' vFile '_temp1''']);
         end
     end
-    [~,vOutput] = system(['ls' ' ' '''' vFile '_temp2''']);
-    if vOverwriteSeqGapInfo == 1 || strncmp(vOutput,'ls: cannot access', 17)
+    if vOverwriteSeqGapInfo == 1 || exist([vFile '_temp2'], 'file') ~= 2
         if vVerbose >= 2
             fprintf('Next command running:\n');
             fprintf(['tr -d ''\r'' <' ' ' '''' vFile '_temp1''>''' vFile '_temp2''']);
@@ -2231,8 +2227,7 @@ function f_run_awk_skripts(vFile, vAWK_install_path, vVerbose, vOverwriteSeqGapI
             fprintf('File %s exists, not overwritten.\n', ['''' vFile '_temp2''']);
         end
     end
-    [~,vOutput] = system(['ls' ' ' '''' vFile '_temp3''']);
-    if vOverwriteSeqGapInfo == 1 || strncmp(vOutput,'ls: cannot access', 17)
+    if vOverwriteSeqGapInfo == 1 || exist([vFile '_temp3'], 'file') ~= 2
         if vVerbose >= 2
             fprintf('Next command running:\n');
             fprintf(['tr -d ''\n'' <' ' ' '''' vFile '_temp2''>''' vFile '_temp3''']);
@@ -2250,8 +2245,7 @@ function f_run_awk_skripts(vFile, vAWK_install_path, vVerbose, vOverwriteSeqGapI
         end
     end
 
-    [~,vOutput] = system(['ls' ' ' '''' vFile '_temp4''']);
-    if vOverwriteSeqGapInfo == 1 || strncmp(vOutput,'ls: cannot access', 17)
+    if vOverwriteSeqGapInfo == 1 || exist([vFile '_temp4'], 'file') ~= 2
         if vVerbose >= 2
             fprintf('Next command running:\n');
             fprintf([vAWK_install_path ' ' '-f get_new_line_in.awk' ' ' '''' vFile '_temp3''>''' vFile '_temp4''']);
@@ -2271,8 +2265,7 @@ function f_run_awk_skripts(vFile, vAWK_install_path, vVerbose, vOverwriteSeqGapI
 
     % Search for sequencing gaps (searches for continuous stretches of
     % ATCGatcg* and Nn s, and lists them in a new file
-    [~,vOutput] = system(['ls' ' ' '''' vFile '_GAPOutput''']);
-    if vOverwriteSeqGapInfo == 1 || strncmp(vOutput,'ls: cannot access', 17)
+    if vOverwriteSeqGapInfo == 1 || exist([vFile '_GAPOutput'], 'file') ~= 2
         if vVerbose >= 2
             fprintf('Next command running:\n');
             fprintf([vAWK_install_path ' ' '-f get_positions_of_gap.awk' ' ' '''' vFile '_temp4''>''' vFile '_GAPOutput''']);
@@ -2484,35 +2477,35 @@ function [vG_MCL, vProtein_IDs] = f_get_MCL_clustering(vProtein_sequence_FastaFi
             error('Run aborted because PC is used in combination with MCL clustering');
         end
 
-        [~, vMakeblastdb_install_path] = system(['which makeblastdb']);
+        [~, vMakeblastdb_install_path] = system('which makeblastdb');
         if strncmp(vMakeblastdb_install_path,'/usr/bin/which: no makeblastdb',size('/usr/bin/which: no makeblastdb',2))
             error('No makeblastdb installed. Abort.\n');
         else
             vMakeblastdb_install_path = regexprep(vMakeblastdb_install_path,'\n','');
         end
 
-        [~, vBlastp_install_path] = system(['which blastp']);
+        [~, vBlastp_install_path] = system('which blastp');
         if strncmp(vBlastp_install_path,'/usr/bin/which: no blastp',size('/usr/bin/which: no blastp',2))
             error('No blastp installed. Abort.\n');
         else
             vBlastp_install_path = regexprep(vBlastp_install_path,'\n','');
         end
 
-        [~, vMcxload_install_path] = system(['which mcxload']);
+        [~, vMcxload_install_path] = system('which mcxload');
         if strncmp(vMcxload_install_path,'/usr/bin/which: no mcxload',size('/usr/bin/which: no mcxload',2))
             error('No mcxload installed. Abort.\n');
         else
             vMcxload_install_path = regexprep(vMcxload_install_path,'\n','');
         end
 
-        [~, vMcl_install_path] = system(['which mcl']);
+        [~, vMcl_install_path] = system('which mcl');
         if strncmp(vMcl_install_path,'/usr/bin/which: no mcl',size('/usr/bin/which: no mcl',2))
             error('No mcl installed. Abort.\n');
         else
             vMcl_install_path = regexprep(vMcl_install_path,'\n','');
         end
 
-        [~, vMcxdump_install_path] = system(['which mcxdump']);
+        [~, vMcxdump_install_path] = system('which mcxdump');
         if strncmp(vMcxdump_install_path,'/usr/bin/which: no mcxdump',size('/usr/bin/which: no mcxdump',2))
             error('No mcxdump installed. Abort.\n');
         else
@@ -2600,7 +2593,7 @@ function [vGenes_all, vGenes_all_Att, vReactions_all, vReactions_all_Att, vG2R] 
     vP2P = [1,3];
     vP2E = [2,1];
     vE2R = [2,1];
-    vR2Pa = [1,2];
+    vR2Pa = [1,2]; %#ok<NASGU>
     
     %Use inputs to write over defaults
     if nargin > vCurrNargin
@@ -2708,9 +2701,9 @@ function [vGenes_all, vGenes_all_Att, vReactions_all, vReactions_all_Att, vG2R] 
     vG2R = false(size(vG2_P,1),size(vE_R2,2));
     for Gene_all_ID = 1:size(vG2R,1)
         vP_ID = vG2_P(Gene_all_ID,:)==1;
-        vP2_ID = [sum(vP_P(vP_ID,:),1)>0]';
-        vE_ID = [sum(vP_E(vP2_ID,:),1)>0]';
-        vR_ID = [sum(vE_R2(vE_ID,:),1)>0]';
+        vP2_ID = [sum(vP_P(vP_ID,:),1)>0]'; %#ok<NBRAK>
+        vE_ID = [sum(vP_E(vP2_ID,:),1)>0]'; %#ok<NBRAK>
+        vR_ID = [sum(vE_R2(vE_ID,:),1)>0]'; %#ok<NBRAK>
         vG2R(Gene_all_ID,vR_ID) = 1;
     end
 end
@@ -2785,7 +2778,7 @@ function [vMapG, vMapT, vMapP, vMapG_MapT, vMapG_MapP] = f_read_in_ConversionFil
     vFIO = fopen(vGeneTranscriptProtein_mapping_File);
     vInitialize = 250000;
     vLine = fgetl(vFIO);
-    vGTP_Header = regexp(vLine,'\t','split');
+    vGTP_Header = regexp(vLine,'\t','split'); %#ok<NASGU>
     vLine = fgetl(vFIO);
     vSplit = regexp(vLine,'\t','split');
     if vVerbose >= 2
@@ -2966,9 +2959,6 @@ function vMapG_Gpgdb = f_map_PGDBs_to_conversion_file(vMapG, vMapT, vMapP, vMapG
     
     if vPGDBIdsToMap_bin(2,1) == 1
         for vi = 1:size(vMapT,1)
-            if vi == 83
-                vStop = 1;
-            end
             for vj = 1:size(vGenesDat_GeneInfo,2)
                 if vVerbose >= 2
                     fprintf('Conversion transcript-ID %i, pgdb-ID %i\n', vi, vj);

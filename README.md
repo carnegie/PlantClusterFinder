@@ -39,7 +39,7 @@ Authors: Pascal Schlapfer, December 2017
     
     -cout fullpath: Path and file name to the cluster-Outputfile, make sure you have access to the file and folder. This is the second Results output file that will be generated.
  
- **Note**: If MCL cluster file isn't provided, pipeline would require [BLAST+](https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html) and [MCL](https://micans.org/mcl/) need to be installed.
+ **Note**: If MCL cluster file isn't provided, the pipeline would require [BLAST+](https://blast.ncbi.nlm.nih.gov/doc/blast-help/downloadblastdata.html) and [MCL](https://micans.org/mcl/) to be installed.
 
  Optional Inputs:
  

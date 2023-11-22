@@ -1,3 +1,3 @@
 Open Matlab (I used matlab 2016b, if you don't use this version, make sure you get a new MCR of your version)
 Call:
-mcc -m PlantClusterFinder.m -a get_new_line_in.awk -a get_positions_of_gap.awk -a enter_new_line_characters_in_fasta_file.awk
+mcc -m PlantClusterFinder.m -a get_positions_of_gap.py

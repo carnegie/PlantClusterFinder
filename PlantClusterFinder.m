@@ -2079,91 +2079,78 @@ end
 %   None (File is generated with the path of the first input argument, 
 %        modifying the gene name)
 function f_get_Sequencing_Gaps(vFile, vPara, vVerbose, vOverwriteSeqGapInfo, vUnmaskedDNA)
-    if ispc()
-        if vOverwriteSeqGapInfo == 1 || ~exist([vFile '_GAPOutput'], 'file')
-            fprintf('Finding sequencing gaps is only set up for linux. Please precompute the the sequencing gaps (masked stretches of DNA) (e.g. on linux server).\n');
-            fprintf('Please use the follwing commands on Linux (use which and programname to find your paths):\n');
-            vAWK_install_path = 'awk_install_path';
-            fprintf('%s -f enter_new_line_characters_in_fasta_file.awk ''%s''>''%s_temp1''\n',vAWK_install_path, vFile, vFile);
-            fprintf('tr -d ''\r'' < ''%s_temp1''>''%s_temp2''\n', vFile, vFile);
-            fprintf('tr -d ''\n'' < ''%s_temp2''>''%s_temp3''\n', vFile, vFile);
-            fprintf('%s -f get_new_line_in.awk ''%s_temp3''>''%s_temp4''\n', vAWK_install_path, vFile, vFile);
-            fprintf('%s -f get_positions_of_gap.awk ''%s_temp4''>''%s_GAPOutput''\n', vAWK_install_path, vFile, vFile);
-            fprintf('Once you have done this, please store the resulting %s_GAPOutput file in the accoring folder of the DNA fasta file and rerun Plantcluster finder.\n', vFile); 
-            error('Run aborted because PC is used in combination with sequencing gap finding\n');
-        end
+    if vVerbose >= 1
+        fprintf('Check python installation.\n');
+    end
+        
+    [~, vAWK_install_path] = system('which python');
+    if strncmp(vAWK_install_path,'/usr/bin/which: no python',22) || strncmp(vAWK_install_path,'python not found',22)
+        error('No python installed. Abort.\n');
     else
-        if vVerbose >= 1
-            fprintf('Check awk installation.\n');
-        end
-        [~, vAWK_install_path] = system('which awk');
-        if strncmp(vAWK_install_path,'/usr/bin/which: no awk',22)
-            error('No awk installed. Abort.\n');
-        else
-            vAWK_install_path = regexprep(vAWK_install_path,'\n','');
-        end
+        vAWK_install_path = regexprep(vAWK_install_path,'\n','');
+    end
 
-        % Linearize the fasta files of the genomes
-        if vVerbose >= 1
-            fprintf('Get information gaps in genomes.\n');
-        end
-        if vPara <= 1
-            f_run_awk_skripts(vFile, vAWK_install_path, vVerbose, vOverwriteSeqGapInfo);
+    % Linearize the fasta files of the genomes
+    if vVerbose >= 1
+        fprintf('Get information gaps in genomes.\n');
+    end
+    if vPara <= 1
+        f_run_python_script(vFile, vAWK_install_path, vVerbose, vOverwriteSeqGapInfo);
+    else
+        %Split Files into scaffolds
+        vFile_ID = 1;
+        vFIO = fopen(vFile);
+        vFIO_temp = fopen([vFile '_' num2str(vFile_ID)],'w');
+        vLine = fgetl(vFIO);
+        if strncmp(vLine,'>',1)
+            fprintf(vFIO_temp,[vLine '\n']);
         else
-            %Split Files into scaffolds
-            vFile_ID = 1;
-            vFIO = fopen(vFile);
-            vFIO_temp = fopen([vFile '_' num2str(vFile_ID)],'w');
-            vLine = fgetl(vFIO);
+            error('First line in DNA Fasta file is not a header\n');
+        end
+        vLine = fgetl(vFIO);
+        while ischar(vLine)
             if strncmp(vLine,'>',1)
+                fclose(vFIO_temp);
+                vFile_ID = vFile_ID + 1;
+                vFIO_temp = fopen([vFile '_' num2str(vFile_ID)],'w');
                 fprintf(vFIO_temp,[vLine '\n']);
             else
-                error('First line in DNA Fasta file is not a header\n');
+                fprintf(vFIO_temp,[vLine '\n']);
             end
             vLine = fgetl(vFIO);
+        end
+        fclose(vFIO_temp);
+        fclose(vFIO);
+            
+        %open matlabpool
+        vPool = parpool('local',vPara-1);
+            
+        %Run the commands individually with parfor
+        parfor vi = 1:size(vFile_ID)
+            f_run_python_script([vFile '_' num2str(vi)], vAWK_install_path, vVerbose, vOverwriteSeqGapInfo);
+        end
+            
+        %close matlabpool
+        delete(vPool);
+            
+        %Build result files together
+        vFIO = fopen([vFile '_GAPOutput_count.txt'],'w');
+        for vi = 1:size(vFile_ID)
+            vFIO_temp = fopen([vFile '_' num2str(vi) '_GAPOutput_count.txt']);
+            vLine = fgetl(vFIO_temp);
             while ischar(vLine)
-                if strncmp(vLine,'>',1)
-                    fclose(vFIO_temp);
-                    vFile_ID = vFile_ID + 1;
-                    vFIO_temp = fopen([vFile '_' num2str(vFile_ID)],'w');
-                    fprintf(vFIO_temp,[vLine '\n']);
-                else
-                    fprintf(vFIO_temp,[vLine '\n']);
-                end
-                vLine = fgetl(vFIO);
+                fprintf(vFIO, [vLine '\n']);
+                vLine = fgetl(vFIO_temp);
             end
             fclose(vFIO_temp);
-            fclose(vFIO);
-            
-            %open matlabpool
-            vPool = parpool('local',vPara-1);
-            
-            %Run the commands individually with parfor
-            parfor vi = 1:size(vFile_ID)
-                f_run_awk_skripts([vFile '_' num2str(vi)], vAWK_install_path, vVerbose, vOverwriteSeqGapInfo);
-            end
-            
-            %close matlabpool
-            delete(vPool);
-            
-            %Build result files together
-            vFIO = fopen([vFile '_GAPOutput_count.txt'],'w');
-            for vi = 1:size(vFile_ID)
-                vFIO_temp = fopen([vFile '_' num2str(vi) '_GAPOutput_count.txt']);
-                vLine = fgetl(vFIO_temp);
-                while ischar(vLine)
-                    fprintf(vFIO, [vLine '\n']);
-                    vLine = fgetl(vFIO_temp);
-                end
-                fclose(vFIO_temp);
-            end
-            fclose(vFIO);
         end
+        fclose(vFIO);
     end
+    
 
     %Produce the Gap analysis file
     % [~,vOutput] = system(['ls' ' ' '''' vFile '_GAPOutput_count.txt''']);
-    if vOverwriteSeqGapInfo == 1 || exist([vFile '_GAPOutput'], 'file') ~= 2
+    if vOverwriteSeqGapInfo == 1 || exist([vFile '_GAPOutput_count.txt'], 'file') ~= 2
         f_analyze_PlantClusterGapFile([vFile '_GAPOutput'], vUnmaskedDNA, vVerbose);
     else
         if vVerbose >= 1
@@ -2172,9 +2159,10 @@ function f_get_Sequencing_Gaps(vFile, vPara, vVerbose, vOverwriteSeqGapInfo, vUn
     end
 end
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
-% Function that uses awk to process the masked DNA fasta file to search for
+% Function that uses python to process the masked DNA fasta file to search for
 % sequencing gaps.
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2183,7 +2171,7 @@ end
 %   vFile: Full path to a dna Fasta file. Note, the folder the DNA fasta
 %          file needs to be writable for the temporary and result files
 %          generated.
-%   vAWK_install_path: Path to the installation of awk.
+%   python_install_path: Path to the installation of Python.
 %   vVerbose: Tells the code on how much of output should be printed out 
 %             the screen. (0 = nothing, 1 = little, 2 = more, ...)
 %   vOverwriteSeqGapInfo: If set to 1, the code enforces masked nucleotide
@@ -2191,88 +2179,17 @@ end
 %                         0, no enforcement).
 % 
 % Outputs: 
-%   None (Temporary (_temp1, _temp2, _temp3, _temp4) and Gapouput
-%        (_GAPOutput) files generated.
-function f_run_awk_skripts(vFile, vAWK_install_path, vVerbose, vOverwriteSeqGapInfo)
-    if vOverwriteSeqGapInfo == 1 || exist([vFile '_temp1'], 'file') ~= 2
-        if vVerbose >= 2
-            fprintf('Next command running:\n');
-            fprintf([vAWK_install_path ' ' '-f enter_new_line_characters_in_fasta_file.awk' ' ' '''' vFile '''>''' vFile '_temp1''']);
-            fprintf('\n');
-        end
-        [vStatus, vOutput] = system([vAWK_install_path ' ' '-f enter_new_line_characters_in_fasta_file.awk' ' ' '''' vFile '''>''' vFile '_temp1''']);
-        if vVerbose >= 2
-            fprintf('Status was %i\n', vStatus);
-            fprintf('Output was:\n');
-            fprintf('%s\n', vOutput);
-        end
-    else
-        if vVerbose >= 1
-            fprintf('File %s exists, not overwritten.\n', ['''' vFile '_temp1''']);
-        end
-    end
-    if vOverwriteSeqGapInfo == 1 || exist([vFile '_temp2'], 'file') ~= 2
-        if vVerbose >= 2
-            fprintf('Next command running:\n');
-            fprintf(['tr -d ''\r'' <' ' ' '''' vFile '_temp1''>''' vFile '_temp2''']);
-            fprintf('\n');
-        end
-        [vStatus, vOutput] = system(['tr -d ''\r'' <' ' ' '''' vFile '_temp1''>''' vFile '_temp2''']);
-        if vVerbose >= 2
-            fprintf('Status was %i\n', vStatus);
-            fprintf('Output was:\n');
-            fprintf('%s\n', vOutput);
-        end
-    else
-        if vVerbose >= 1
-            fprintf('File %s exists, not overwritten.\n', ['''' vFile '_temp2''']);
-        end
-    end
-    if vOverwriteSeqGapInfo == 1 || exist([vFile '_temp3'], 'file') ~= 2
-        if vVerbose >= 2
-            fprintf('Next command running:\n');
-            fprintf(['tr -d ''\n'' <' ' ' '''' vFile '_temp2''>''' vFile '_temp3''']);
-            fprintf('\n');
-        end
-        [vStatus, vOutput] = system(['tr -d ''\n'' <' ' ' '''' vFile '_temp2''>''' vFile '_temp3''']);
-        if vVerbose >= 2
-            fprintf('Status was %i\n', vStatus);
-            fprintf('Output was:\n');
-            fprintf('%s\n', vOutput);
-        end
-    else
-        if vVerbose >= 1
-            fprintf('File %s exists, not overwritten.\n', ['''' vFile '_temp3''']);
-        end
-    end
-
-    if vOverwriteSeqGapInfo == 1 || exist([vFile '_temp4'], 'file') ~= 2
-        if vVerbose >= 2
-            fprintf('Next command running:\n');
-            fprintf([vAWK_install_path ' ' '-f get_new_line_in.awk' ' ' '''' vFile '_temp3''>''' vFile '_temp4''']);
-            fprintf('\n');
-        end
-        [vStatus, vOutput] = system([vAWK_install_path ' ' '-f get_new_line_in.awk' ' ' '''' vFile '_temp3''>''' vFile '_temp4''']);
-        if vVerbose >= 2
-            fprintf('Status was %i\n', vStatus);
-            fprintf('Output was:\n');
-            fprintf('%s\n', vOutput);
-        end
-    else
-        if vVerbose >= 1
-            fprintf('File %s exists, not overwritten.\n', ['''' vFile '_temp4''']);
-        end
-    end
-
+%   None Gapouput (_GAPOutput) files generated.
+function f_run_python_script(vFile, python_install_path, vVerbose, vOverwriteSeqGapInfo)
     % Search for sequencing gaps (searches for continuous stretches of
     % ATCGatcg* and Nn s, and lists them in a new file
     if vOverwriteSeqGapInfo == 1 || exist([vFile '_GAPOutput'], 'file') ~= 2
         if vVerbose >= 2
             fprintf('Next command running:\n');
-            fprintf([vAWK_install_path ' ' '-f get_positions_of_gap.awk' ' ' '''' vFile '_temp4''>''' vFile '_GAPOutput''']);
+            fprintf([python_install_path ' ' 'get_positions_of_gap.py -i' ' ' '''' vFile ''' -o ''' vFile '_GAPOutput''']);
             fprintf('\n');
         end
-        [vStatus, vOutput] = system([vAWK_install_path ' ' '-f get_positions_of_gap.awk' ' ' '''' vFile '_temp4''>''' vFile '_GAPOutput''']);
+        [vStatus, vOutput] = system([python_install_path ' ' 'get_positions_of_gap.py -i' ' ' '''' vFile ''' -o ''' vFile '_GAPOutput''']);
         if vVerbose >= 2
             fprintf('Status was %i\n', vStatus);
             fprintf('Output was:\n');

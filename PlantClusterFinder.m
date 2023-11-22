@@ -2163,7 +2163,7 @@ function f_get_Sequencing_Gaps(vFile, vPara, vVerbose, vOverwriteSeqGapInfo, vUn
 
     %Produce the Gap analysis file
     % [~,vOutput] = system(['ls' ' ' '''' vFile '_GAPOutput_count.txt''']);
-    if vOverwriteSeqGapInfo == 1 || exist([vFile '_GAPOutput'], 'file') ~= 2
+    if vOverwriteSeqGapInfo == 1 || exist([vFile '_GAPOutput_count.txt'], 'file') ~= 2
         f_analyze_PlantClusterGapFile([vFile '_GAPOutput'], vUnmaskedDNA, vVerbose);
     else
         if vVerbose >= 1

@@ -2,3 +2,4 @@ test/
 *.blast*
 *.MCL*
 PlantClusterFinder.app*
+*_GAPOutput*

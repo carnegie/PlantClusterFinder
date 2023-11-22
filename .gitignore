@@ -1,4 +1,5 @@
 test/
 *.blast*
 *.MCL*
+PlantClusterFinder.app*
 

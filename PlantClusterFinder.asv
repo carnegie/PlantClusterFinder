@@ -1976,7 +1976,8 @@ function vSeqGaps = f_annotate_Sequencing_Gaps(vFile, vInterGeneLocation, vUniqu
             f_get_Sequencing_Gaps(vFile, vPara, vVerbose, vOverwriteSeqGapInfo, vUnmaskedDNA)
         end
     else
-        % Original way to test file existence, [~,vOutput] = system(['ls' ' ' '''' vFile '_GAPOutput''']);
+        % Original way to test file existence, 
+        % [~,vOutput] = system(['ls' ' ' '''' vFile '_GAPOutput''']);
         % if strncmp(vOutput,'ls: cannot access', 17) 
         if exist([vFile '_GAPOutput'], 'file') ~= 2 || vOverwriteSeqGapInfo
             f_get_Sequencing_Gaps(vFile, vPara, vVerbose, vOverwriteSeqGapInfo, vUnmaskedDNA)
@@ -2093,11 +2094,11 @@ function f_get_Sequencing_Gaps(vFile, vPara, vVerbose, vOverwriteSeqGapInfo, vUn
         end
     else
         if vVerbose >= 1
-            fprintf('Check awk installation.\n');
+            fprintf('Check gawk installation.\n');
         end
-        [~, vAWK_install_path] = system('which awk');
-        if strncmp(vAWK_install_path,'/usr/bin/which: no awk',22)
-            error('No awk installed. Abort.\n');
+        [~, vAWK_install_path] = system('which gawk');
+        if strncmp(vAWK_install_path,'/usr/bin/which: no gawk',22)
+            error('No gawk installed. Abort.\n');
         else
             vAWK_install_path = regexprep(vAWK_install_path,'\n','');
         end
@@ -2162,7 +2163,7 @@ function f_get_Sequencing_Gaps(vFile, vPara, vVerbose, vOverwriteSeqGapInfo, vUn
 
     %Produce the Gap analysis file
     % [~,vOutput] = system(['ls' ' ' '''' vFile '_GAPOutput_count.txt''']);
-    if vOverwriteSeqGapInfo == 1 || exist([vFile '_GAPOutput'], 'file') ~= 2
+    if vOverwriteSeqGapInfo == 1 || exist([vFile '_GAPOutput_count.txt'], 'file') ~= 2
         f_analyze_PlantClusterGapFile([vFile '_GAPOutput'], vUnmaskedDNA, vVerbose);
     else
         if vVerbose >= 1

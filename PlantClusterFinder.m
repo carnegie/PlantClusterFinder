@@ -2083,7 +2083,7 @@ function f_get_Sequencing_Gaps(vFile, vPara, vVerbose, vOverwriteSeqGapInfo, vUn
         if vOverwriteSeqGapInfo == 1 || ~exist([vFile '_GAPOutput'], 'file')
             fprintf('Finding sequencing gaps is only set up for linux. Please precompute the the sequencing gaps (masked stretches of DNA) (e.g. on linux server).\n');
             fprintf('Please use the follwing commands on Linux (use which and programname to find your paths):\n');
-            vAWK_install_path = 'awk_install_path';
+            vAWK_install_path = 'gawk_install_path';
             fprintf('%s -f enter_new_line_characters_in_fasta_file.awk ''%s''>''%s_temp1''\n',vAWK_install_path, vFile, vFile);
             fprintf('tr -d ''\r'' < ''%s_temp1''>''%s_temp2''\n', vFile, vFile);
             fprintf('tr -d ''\n'' < ''%s_temp2''>''%s_temp3''\n', vFile, vFile);
@@ -2094,11 +2094,11 @@ function f_get_Sequencing_Gaps(vFile, vPara, vVerbose, vOverwriteSeqGapInfo, vUn
         end
     else
         if vVerbose >= 1
-            fprintf('Check awk installation.\n');
+            fprintf('Check gawk installation.\n');
         end
-        [~, vAWK_install_path] = system('which awk');
-        if strncmp(vAWK_install_path,'/usr/bin/which: no awk',22)
-            error('No awk installed. Abort.\n');
+        [~, vAWK_install_path] = system('which gawk');
+        if strncmp(vAWK_install_path,'/usr/bin/which: no gawk',22)
+            error('No gawk installed. Abort.\n');
         else
             vAWK_install_path = regexprep(vAWK_install_path,'\n','');
         end

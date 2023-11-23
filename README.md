@@ -1,7 +1,5 @@
 # PlantClusterFinder (version 1.3)
 
-**Note**: For calculating sequencing gaps, PlantClusterFinder would call 3 awk scripts that utilizes GNU awk functions. For systems that has 'gawk' and 'awk' as separate commands, use "git checkout gawk_gap" to the branch that specifically calls 'gawk'.  If you prefer a different option, use "git checkout python_gap" to the branch that uses a python script to perform the same task.
-
 PlantClusterFinder (PCF) detects metabolic gene clusters in a sequenced genome. It uses a gene location file provided by the user (see below) and a PGDB created with Pathway Tools as well as further information (see below) to identify enzyme-coding genes (metabolic genes) located together on a chromosome. Initially only continous stretches of metabolic genes lying directly next to each other are allowed. This condition is relaxed by iteratively increasing the intervening (non-metabolic) gene size by one. Several criteria to select for clusters are provided. In addition to this, clusters can be prevented from forming by a section of criteria.
 Details of PCF (version 1.0) can be found in PMID:
 28228535.  
@@ -16,7 +14,7 @@ The major differences between this version (1.3) and previous versions (1.0 and 
 Authors: Pascal Schlapfer, December 2017
          Bo Xue, December 2017
 
-
+**Note**: *For calculating sequencing gaps, PlantClusterFinder would call 3 awk scripts that utilizes GNU awk functions. For systems that has 'gawk' and 'awk' as separate commands, use "git checkout gawk_gap" to the branch that specifically calls 'gawk'.  If you prefer a different option, use "git checkout python_gap" to the branch that uses a python script to perform the same task*.
  
  Mandatory inputs: all files need full path, order does not matter.
  
